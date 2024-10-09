@@ -13,35 +13,35 @@ ReactJS:
     Hoàn thành 1 giao diện ReactJS
 
 -- TypeScripts --
-    Khai báo 1 biến myName trong JavaScipts:  'daonq' ?
-        const myName = "daonq"
-        let myName = "daonq"
-        var myName = "daonq"
+    Khai báo 1 biến myName trong JavaScipts:  'anpg' ?
+        const myName = "anpg"
+        let myName = "anpg"
+        var myName = "anpg"
         var myAge = 20
 
-    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='daonq1', address='HN'
+    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='anpg1', address='HN'
         let student1 = 
             {
                 id: 1,
-                name: "daonq1",
+                name: "anpg1",
                 address: "HN"
             };
         let student2 = 
             {
                 id: 2,
-                name: "daonq2",
+                name: "anpg2",
                 address: "HN"
             };
 
            let student3 = 
             {
                 id: 2,
-                name_: "daonq2",
+                name_: "anpg2",
                 address: "HN"
             };
     JavaScipts != Java
         Java:
-            String myName = "daonq"
+            String myName = "anpg"
             int    myAge = 20;
             Class(thuộc tính, phương thức) ==> Instant
     
@@ -61,7 +61,7 @@ ReactJS:
         Demo TS, JS?
             Cách 1:
                 .js
-                var myName ="daonq",
+                var myName ="anpg",
                 console.log(myName)
                 Tạo file: index.html
                 link file .js vào file index.html
@@ -313,14 +313,14 @@ Cấu trúc cộng chuỗi trong JS
     Class Component 
         Dùng phím tắt rcc
         
-        class Daonq extends Component {
+        class anpg extends Component {
         // hàm render
         render() {
             // logic
             // logic
             return (
             <>
-                <h3>Hello DAONQ VTI</h3>
+                <h3>Hello anpg VTI</h3>
             </>
             );
         }
