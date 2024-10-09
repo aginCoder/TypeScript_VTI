@@ -1,0 +1,366 @@
+----------------------------- Buổi 1 -----------------------------
+Frontend Basic:
+    HTML
+    CSS
+    JS
+
+ReactJS:    
+    TypeScripts
+    JS extra
+    ReactJS
+
+Đánh giá cuối học phần:
+    Hoàn thành 1 giao diện ReactJS
+
+-- TypeScripts --
+    Khai báo 1 biến myName trong JavaScipts:  'daonq' ?
+        const myName = "daonq"
+        let myName = "daonq"
+        var myName = "daonq"
+        var myAge = 20
+
+    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='daonq1', address='HN'
+        let student1 = 
+            {
+                id: 1,
+                name: "daonq1",
+                address: "HN"
+            };
+        let student2 = 
+            {
+                id: 2,
+                name: "daonq2",
+                address: "HN"
+            };
+
+           let student3 = 
+            {
+                id: 2,
+                name_: "daonq2",
+                address: "HN"
+            };
+    JavaScipts != Java
+        Java:
+            String myName = "daonq"
+            int    myAge = 20;
+            Class(thuộc tính, phương thức) ==> Instant
+    
+    JavaScipts:
+        Khai báo biến: Không cần định kiểu, kiểu dữ liệu sẽ được tự nhận khi gán giá trị
+        Về đối tượng, thì tạo trực tiếp, không cần thông qua Class
+
+    Vấn đề JavaScipts??
+    Mong muốn: JavaScipts  ==> TypeScripts
+    TypeScripts:
+        Chỉ là 1 phiên bản nâng cấp của JavaScipts, hướng tới việc khai báo tường minh về kiểu dữ liệu, hướng tới
+            việc sử dụng đối tượng, OOP 1 cách rõ ràng hơn(rất giống Java)
+    
+        Phục vụ cho người lập trình viên
+        Trình duyệt chỉ hiểu: HTML CSS JS
+        Cần phải chuyển đổi đoạn mã TypeScripts ==> JavaScipts trước khi chạy trên trình duyệt?
+        Demo TS, JS?
+            Cách 1:
+                .js
+                var myName ="daonq",
+                console.log(myName)
+                Tạo file: index.html
+                link file .js vào file index.html
+            Cách 2:
+                Sử dụng môi trường NodeJS để chạy trực tiếp các file JS
+        Cài đặt:
+            NodeJS: https://nodejs.org/ 
+                    node -v
+            npm: Quản lý các gói cài đặt
+                    npm -v 
+            TypeScripts: npm install -g typescript
+                         tsc --version
+
+        Demo chương trình TS đầu tiên
+        Kiểu dữ liệu: number, string, boolean, void, undefined, null
+        Chạy: 
+            Cần chuyển đổi file TS ==> file JS ==> Chạy file JS
+            tsc tên_File(tsc .\demo1.ts)  ==> tạo ra 1 file .js
+            node .\demo1.js
+
+
+----------------------------- Buổi 2 -----------------------------
+OOP trong TypeScripts
+    Class:
+        Thuộc Tính
+        Phương thức
+        Contructor
+    Instant: new
+
+    Tính đóng gói: private, getter(), setter()
+    Tính kế thừa
+    Tính đa hình: Override & Overload
+    Tính trừu tượng: abtraction
+
+    Access modifier
+        public
+        protected
+        default
+        private
+
+    Demo OOP TypeScripts:
+        Xây dựng chương trình để quản lý các bạn học viên ở trong lớp Railway85
+        Tạo Person: id, name, address,...
+        Tạo ra các Instant: student1, student2,...
+        In thông tin các bạn học viên ra màn hình
+
+Export, Import trong JS
+    Cách 1: 
+        export {a,b,...}
+        import {a,b,..} from 'file'
+    Cách 2: Sử dụng từ khoá export ngay đầu thành phần cần export
+    Cách 3: 
+        export default
+        import alias from "./tenFile";
+
+Cấu trúc cộng chuỗi trong JS
+    VD: "ID: " + person2.id
+    Cách khác: Viết theo Template String
+        `ID: ${person2.id} Name: ${person2.name} Address: ${person2.address}`
+
+1 Số Tool nên sử dụng
+    Format code: Prettier - Code formatter
+    Tool TypeScripts: TypeScript Toolbox
+        Ctrl + Ship + P
+
+----------------------------- Buổi 3- JavaScipts Mở rộng -----------------------------
+1. scope trong JavaScipts
+    Global scope: Sau khi khai báo thì được sử dụng trong toàn bộ chương trình
+    Function scope (Local scope): Sau khi khai báo chỉ được sử dụng trong phạm hàm
+2. var & let & const trong JavaScipts
+    var & let: Khai báo biến trong chương trình
+        ReDeclare: Khai báo lại
+        ReAssign: Gán lại giá trị
+        Hosting: Sử dụng 1 biến trước khi khai báo
+        var: ReDeclare, Hosting
+
+3. Destructuring: Phá vỡ cấu trúc
+    Object
+    Mảng
+
+4. Spread ...
+    Object
+5. Function
+    Arrow Function
+
+6. map()
+
+----------------------------- Buổi 4- JavaScipts Mở rộng -----------------------------
+1. Higher Order Function HOF: 
+    Hàm hoạt động trên các hàm khác
+    1 hàm có thể nhận 1 hàm khác làm tham số, và sau khi xử xong thì có thể trả 1 hàm khác
+    function(a,b,function()){
+        ..
+        ..
+        ..
+        return function()
+    }
+
+2. Bất đồng bộ và xử lý bất đồng bộ trong JavaScipts
+    Chương trình đồng bộ?
+    Callback Hell?
+    Promise:
+        then
+        reject
+        resolve
+        Demo: Call API Sử dụng promise?
+
+    async/await 
+
+------------------ Buổi 5 - ReactJS -------------------------------
+1. ReacJS 
+    Thư viện hỗ trợ xử lý giao diện (Frontend) 
+    Ưu điểm:
+        Hoạt động mượt hơn.
+        Tái sử dụng
+    Phân chia: Giao diện lớn ==> Giao diện nhỏ hơn ==> nhỏ ==> ...
+    Component
+
+2. Tạo 1 dự án ReactJS
+    create-react-app: Công cụ (tool) hỗ trợ cho bạn tạo ra 1 dự án ReactJS
+    npm install -g create-react-app: cài đặt công cụ create-react-app
+
+    Sử dụng create-react-app tạo ra dự án ReactJS đầu tiên
+        create-react-app
+    Chạy dự án
+        Chuyển vào thư mục dự án:
+            cd đường dẫn
+            npm start
+3. Cấu trúc dự án
+    Node modules
+    public
+        index.html
+    src
+        inde.js
+        app.js
+    ==> Thay đổi nội dung ==> Hello VTI
+
+    Xóa các file không cần thiết
+
+4. Component
+    import "./App.css";
+
+    function App() {
+        return (
+            <div className="App">
+            <h1>Hello VTI</h1>
+            </div
+        );
+    }
+
+    export default App;
+
+    ----------------------------- Buổi 6- ReactJS -----------------------------
+1.   React.createElement(..,..,..)==> Hàm dùng tạo các thành html cho trang web
+    Nhược điểm: Khó viết
+
+    JSX: JavaScipts Extension, Có cấu trúc gần giống với mã HTML(90%) hỗ trợ cho việc tạo ra các Component 1 cách dễ dàng hơn
+    JSX không chạy trực tiếp được trên trình duyệt
+    Phải có 1 thẻ cha bao bọc lại tất cả các thẻ con
+        Thẻ Fragment: Trong suốt, chỉ có tác dụng đảm bảo cấu trúc cha con của JSX
+         <React.Fragment>
+            ...
+         </React.Fragment>
+
+         <>
+            ...
+         </>
+
+2.  Thực hiện CSS cho Component?
+    
+    Viết thuộc tính CSS trong cùng thẻ
+         style={
+                {
+                color: "red",
+                backgroundColor: "blue",
+                width: "200px",
+                height: "200px",
+                }
+            }
+        Với những thuộc tính CSS dài ==> Camel Case
+    Viết vào đầu file 
+        let divStyle = {
+            color: "red",
+            backgroundColor: "blue",
+            width: "200px",
+            height: "200px",
+        };
+    Tạo file .css==> link
+        import "./App.css";
+
+
+3.  Thực hiện bắt và xử lý sự kiện trong ReactJS?
+    Tên của sự kiện:
+        onClick: Viết hoa phần chữ cái sự kiện
+    // Viết hàm xử lý sự kiện
+        let handleClick = () => {
+            //
+            alert("Hello VTI");
+        };
+     onClick={handleClick}
+
+4. Sử dụng thư viện Bootstrap trong xây dựng giao diện  ReactJS
+    Tổng hợp HTML CSS JS
+    Hỗ trợ cho việc xây dựng 1 cách nhanh chóng và đẹp mắt
+        Các thành phần được xây dựng sẵn
+            Khi cần sử dụng ==> Vào trang Bootstrap tìm kiếm, copy các đoạn code, chú ý tới tên các Class
+            Tool: bs3-...
+        Phân chia bố cục nhanh chóng    
+            
+
+    Tool hỗ trợ: Boostrap 3 Code Bootstrap 3 Snippets
+    Import Boostrap vào dự án
+            <link
+            rel="stylesheet"
+            media="screen"
+            href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+            <script src="//code.jquery.com/jquery.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        Tool: bs3-cdn
+
+    
+----------------------------- Buổi 7+8- ReactJS -----------------------------
+1. Component
+    Phân chia giao diện thành các Component nhỏ hơn.
+    Tạo nhanh Component: 
+        Cài đặt Extension: Reactjs code snippets
+        Tạo nhanh Component: rsf
+    Muốn phân chia Component:
+        Tạo 1 file .js, sau đó tạo cấu trúc Component:rsf
+        Để sử dụng, thực hiện Import vào nơi cùng dùng, gọi để sử dụng  
+            import Vti from "./Components/Vti";
+            <Vti />
+
+    Functional Component
+    
+       function Vti(props) {
+            //
+            //
+            return (
+                <>
+                <h2>Hello VTI</h2>
+                </>
+            );
+            }
+
+        export default Vti;
+
+    Class Component 
+        Dùng phím tắt rcc
+        
+        class Daonq extends Component {
+        // hàm render
+        render() {
+            // logic
+            // logic
+            return (
+            <>
+                <h3>Hello DAONQ VTI</h3>
+            </>
+            );
+        }
+        }
+
+2. Áp dụng.
+3. Truyền dữ liệu giữa các Component
+    Component cha
+    Component con
+    1 số chiều truyền dữ liệu chính: 
+        1. Truyền dữ liệu từ cha xuống con:
+            props:
+                Key-Value
+            Nhận lại dữ liệu ở Component con:
+            `    Nếu Component con được xây dựng theo hướng Class Component:
+                    this.props.tên_Key
+                Nếu Component con được xây dựng theo hướng Functional Component:
+                    props.tên_Key
+
+        2. Truyền dữ liệu từ con về cha
+            Sử dụng hàm Callback.
+            Thực hiện khai báo hàm callback bên Component cha, chú ý khai tham số đầu vào cho hàm để nhận lại dữ liệu
+            Truyền hàm Callback từ Component cha xuống Component con
+            Tại Component con, thực hiện gọi lại hàm Callback ở Cha thông qua props
+        3. Truyền dữ liệu giữa 2 Component cùng cấp
+            Không thể truyền dữ liệu giữa 2 Component cùng cấp
+    State?
+        - Giống như 1 biến trong chương trình, lưu trữ dữ liệu trong Class Component
+        - Khi dữ liệu lưu trữ trong State thay đổi, thì giao diện sẽ được tự động cập nhật dữ liệu mới
+        Khai báo state trong chương trình
+              constructor(props) {
+                    super(props);
+                    this.state = {
+                    click_number: 0,
+                    };
+                }
+        Sử dụng State:
+            this.state.tên_State
+        Cập nhật dữ liệu cho State:
+                this.setState({
+                    click_number: this.state.click_number + 1,
+                });
+        - Không sử dụng State trong Functional Component

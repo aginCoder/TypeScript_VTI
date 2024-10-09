@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 200px;
+    background: #e7e7e7;
+}
+
+.main-content {
+    display: flex;
+}
+
+.content-area {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.group-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.group-list th, .group-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}

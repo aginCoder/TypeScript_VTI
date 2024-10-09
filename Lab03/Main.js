@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var CanBo_1 = require("./CanBo");
+var KySu_1 = require("./KySu");
+var NhanVien_1 = require("./NhanVien");
+var QLCB_1 = require("./QLCB");
+var qlcb = new QLCB_1.QLCB();
+var canBo = new CanBo_1.CanBo("Nguyễn Trần Khánh Vi", 20, "Female", "Hanoi");
+var kySu = new KySu_1.KySu("Thái Hoàng Quân", 20, "Male", "HCMC", "Construction");
+var nhanVien = new NhanVien_1.NhanVien("Đỗ Văn Vũ", 25, "Male", "Da Nang", "Administration");
+qlcb.addStaff(canBo);
+qlcb.addStaff(kySu);
+qlcb.addStaff(nhanVien);
+qlcb.displayAllStaff();
+console.log("Search result:", qlcb.searchByName("Đỗ Văn Vũ"));
+qlcb.deleteByName("Đỗ Văn Vũ");
+qlcb.displayAllStaff();
+qlcb.exitProgram();
