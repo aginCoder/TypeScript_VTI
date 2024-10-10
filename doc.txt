@@ -364,3 +364,9 @@ Cấu trúc cộng chuỗi trong JS
                     click_number: this.state.click_number + 1,
                 });
         - Không sử dụng State trong Functional Component
+
+        ----------------------------- Buổi 9 - ReactJS -----------------------------
+
+    1. Xử lý Form trong ReactJS
+        Bước 1: Khai báo ra state để lưu trữ dữ liệu cho ô nhập
+        Bước 2: 
