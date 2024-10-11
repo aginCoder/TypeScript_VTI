@@ -6,7 +6,7 @@
 //   let dataFromAppToTop = "data_From_App_To_Top";
 //   let student = {
 //     id: 1,
-//     name: "anpg1",
+//     name: "daonq1",
 //     class: "Railway85",
 //   };
 
@@ -28,7 +28,7 @@
 // <div className="container">
 //   <TopComponent
 //     dataFromAppToTopProps={dataFromAppToTop}
-//     x="anpg"
+//     x="daonq"
 //     y="VTI"
 //     student={student}
 //     headingTop={headingTop}
@@ -36,7 +36,7 @@
 //   />
 //   <BottomComponent
 //     myClass="Railway 85"
-//     myName="anpg"
+//     myName="daonq"
 //     headingBottom="----- Component Bottom-------"
 //     getDataFromBottom={getDataFromBottom}
 //   />
@@ -62,7 +62,7 @@ class App extends Component {
   dataFromAppToTop = "data_From_App_To_Top";
   student = {
     id: 1,
-    name: "anpg1",
+    name: "daonq1",
     class: "Railway85",
   };
 
@@ -85,19 +85,21 @@ class App extends Component {
 
   //
   render() {
+    let dataToTopChild = "dataToTopChild";
     return (
       <div className="container">
         <TopComponent
           dataFromAppToTopProps={this.dataFromAppToTop}
-          x="anpg"
+          x="daonq"
           y="VTI"
           student={this.student}
           headingTop={this.headingTop}
           getDataFromTop={this.getDataFromTop}
+          dataToTopChild={dataToTopChild}
         />
         <BottomComponent
           myClass="Railway 85"
-          myName="anpg"
+          myName="daonq"
           headingBottom="----- Component Bottom-------"
           getDataFromBottom={this.getDataFromBottom}
           data={this.state.data}

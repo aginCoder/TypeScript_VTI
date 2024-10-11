@@ -368,5 +368,11 @@ Cấu trúc cộng chuỗi trong JS
         ----------------------------- Buổi 9 - ReactJS -----------------------------
 
     1. Xử lý Form trong ReactJS
-        Bước 1: Khai báo ra state để lưu trữ dữ liệu cho ô nhập
-        Bước 2: 
+    Bước 1: Khai báo ra State để lưu trữ dữ liệu cho ô nhập liệu
+    Bước 2: Trong ô nhập liệu
+        Đặt thuộc tính value: value={this.state.data}
+        Bắt sự kiện onChange={this.handleChange}
+    Bước 3: Khai báo hàm xử lý sự kiện onCHange: handleChange
+            this.setState({
+                data: event.target.value,
+            }); 

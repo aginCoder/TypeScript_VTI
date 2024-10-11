@@ -23,7 +23,7 @@ function BottomComponent(props) {
             </div>
             <div className="panel-body">
               <textarea className="form-control" rows="3">
-                Hello 
+                Hello VTI
               </textarea>
             </div>
           </div>

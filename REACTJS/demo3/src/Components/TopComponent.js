@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TopChildComponent from "./TopChildComponent";
 
 class TopComponent extends Component {
   // Contrutor: là hàm được gọi đầu tiên trong Class Component
@@ -10,6 +11,13 @@ class TopComponent extends Component {
   //     b: "vti",
   //   };
   // }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: "",
+    };
+  }
 
   // Khai báo biến click_number
   // click_number = 0;
@@ -23,11 +31,22 @@ class TopComponent extends Component {
     // this.setState({
     //   click_number: this.state.click_number + 1,
     // });
+    console.log("Bạn vừa nhập vào ô Input dữ liệu là: ", this.state.data);
+
     let dataFromApp = "....data_From_Top_To_Bottom...";
     this.props.getDataFromTop(dataFromApp);
   };
 
-  //
+  // Khai báo hàm handleChange
+  handleChange = (event) => {
+    // console.log("event: ", event);
+    // console.log("event.target.value: ", event.target.value);
+
+    this.setState({
+      data: event.target.value,
+    });
+    // console.log("data: ", this.state.data);
+  };
   render() {
     //Nhận lại dữ liệu
     // let dataFromAppToTopProps = this.props.dataFromAppToTopProps;
@@ -36,7 +55,8 @@ class TopComponent extends Component {
     // let student = this.props.student;
 
     // Destructuring
-    let { dataFromAppToTopProps, x, y, student, headingTop } = this.props;
+    let { dataFromAppToTopProps, x, y, student, headingTop, dataToTopChild } =
+      this.props;
 
     //
     // console.log("v_dataFromAppToTopProps: ", dataFromAppToTopProps);
@@ -60,6 +80,8 @@ class TopComponent extends Component {
                       type="text"
                       className="form-control"
                       // value={this.state.click_number}
+                      value={this.state.data}
+                      onChange={this.handleChange}
                     />
                   </div>
 
@@ -76,6 +98,10 @@ class TopComponent extends Component {
               </div>
             </div>
           </div>
+        </div>
+        {/* TopChild */}
+        <div>
+          <TopChildComponent dataToTopChild={dataToTopChild} />
         </div>
       </>
     );
