@@ -376,3 +376,58 @@ Cấu trúc cộng chuỗi trong JS
             this.setState({
                 data: event.target.value,
             }); 
+
+        ----------------------------- Buổi 10 - ReactJS -----------------------------
+
+    1. Thực hành Mini Project
+        Tạo dự án (Functional Component)
+        Cấu trúc của dự án
+            Page
+            Container
+            Component
+
+            Container Component: Xử lý logic
+            UI Component: Hiển thị giao diện
+
+    1 số UI:
+        Reactrap: Button
+        MUI
+        AntDesign
+
+        ----------------------------- Buổi 11 - ReactJS_Hook -----------------------------
+
+    1. Hook?
+        Class Component: State, LifeCycle
+        Functional Component ==> (State, (same same) LifeCycle,...) ==> hook 
+            + useState(): Quản lý State
+                const [tên_State, Hàm dùng để thay đổi giá trị State] - useState(giá trị khởi tạo) 
+            + useEffect(): Quản lý sự thay đổi của code(gần giống LifeCycle trong class Component)
+            + useContext(): Quản lý sự thay đổi của code(gần giống LifeCycle trong class Component) 
+                useEffect(Hàm thực thi, tham số phụ thuộc)
+            TH1:
+                useEffect(() => {
+                    console.log("Đoạn code 1 được gọi!!");
+                    });
+                    ==> Được gọi trong Mounting(tương đương với componentDidmount), Updating(componentDidUpdate)
+            TH2:
+                useEffect(() => {
+                    console.log("Đoạn code 2 được gọi!!");
+                    }, [count1]);
+                    ==> Được gọi trong Mounting(tương đương với componentDidmount), và chỉ được gọi khi 
+            TH3:
+                useEffect(() => {
+                    console.log("Đoạn code 3 được gọi!!");
+                    }, []);
+                    ==> Được gọi trong Mounting(tương đương với componentDidmount)
+            TH3:
+                useEffect(() => {
+                    // Logic
+                    return () => {
+                    console.log("Đoạn code 3 được gọi!!");
+                    }, 
+                });
+            + useReducer():
+            + useMemo():
+            + useLayout():
+            + useRef():
+            + ... 
