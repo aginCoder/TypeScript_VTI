@@ -1,10 +1,27 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { Button, Row, Col } from "reactstrap";
 
 function CreateButton(props) {
+  let { onHandleCreateButton } = props;
+
+  let handleCreateNewAccount = () => {
+    onHandleCreateButton();
+  };
+
   return (
     <>
-      <Button color="primary">Create New Account</Button>
+      <Row className="justify-content-end">
+        <Col xs="auto">
+          <Button
+            style={{
+              background: "var(--bs-danger)"
+            }}
+            onClick={handleCreateNewAccount}
+          >
+            Create New Account
+          </Button>
+        </Col>
+      </Row>
     </>
   );
 }

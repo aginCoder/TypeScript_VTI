@@ -394,40 +394,41 @@ Cấu trúc cộng chuỗi trong JS
         MUI
         AntDesign
 
-        ----------------------------- Buổi 11 - ReactJS_Hook -----------------------------
+----------------------------- Buổi 11 ReactJS - Hook -----------------------------
+1. Hook?
+    Class Component: State, LifeCycle
+    Functional Component  ==> (State,(same same)LifeCycle,...)  ==> hook
+        + useState(): Quản lý State
+            const [tên_State, Hàm dùng để thay đổi giá trị State] = useState(Giá trị khởi tạo ban đầu cho State)
 
-    1. Hook?
-        Class Component: State, LifeCycle
-        Functional Component ==> (State, (same same) LifeCycle,...) ==> hook 
-            + useState(): Quản lý State
-                const [tên_State, Hàm dùng để thay đổi giá trị State] - useState(giá trị khởi tạo) 
-            + useEffect(): Quản lý sự thay đổi của code(gần giống LifeCycle trong class Component)
-            + useContext(): Quản lý sự thay đổi của code(gần giống LifeCycle trong class Component) 
-                useEffect(Hàm thực thi, tham số phụ thuộc)
-            TH1:
-                useEffect(() => {
-                    console.log("Đoạn code 1 được gọi!!");
+        + useEfect(): Quản lý sự thay đổi của code(gần giống LifeCycle trong class Component)
+            useEfect(Hàm thực thi, Tham số phụ thuộc)
+            TH 1:
+              useEffect(() => {
+                        console.log("Đoạn Code 1 được gọi!!");
                     });
-                    ==> Được gọi trong Mounting(tương đương với componentDidmount), Updating(componentDidUpdate)
-            TH2:
-                useEffect(() => {
-                    console.log("Đoạn code 2 được gọi!!");
+                    ==> Được gọi trong Mouting(Tương đương với componentDidMount), Updating(componentDidUpdate ) 
+            TH 2:
+              useEffect(() => {
+                        console.log("Đoạn Code 1 được gọi!!");
                     }, [count1]);
-                    ==> Được gọi trong Mounting(tương đương với componentDidmount), và chỉ được gọi khi 
-            TH3:
+                    ==> Được gọi trong Mouting(Tương đương với componentDidMount), và chỉ được gọi khi tham số phụ thuộc count1 thay đổi
+            TH 3:
                 useEffect(() => {
-                    console.log("Đoạn code 3 được gọi!!");
-                    }, []);
-                    ==> Được gọi trong Mounting(tương đương với componentDidmount)
-            TH3:
-                useEffect(() => {
-                    // Logic
-                    return () => {
-                    console.log("Đoạn code 3 được gọi!!");
-                    }, 
-                });
-            + useReducer():
-            + useMemo():
-            + useLayout():
-            + useRef():
-            + ... 
+                    console.log("Đoạn Code 3 được gọi!!");
+                }, []);
+                     ==> Được gọi trong Mouting(Tương đương với componentDidMount),
+
+            Th 4:
+                  useEffect(() => {
+                                //    Logic
+                                return () => {
+                                console.log("Đoạn Code 4 được gọi!!");
+                                };
+                            });
+        + useContext():
+        + useReducer():
+        + useMemo()
+        + useLayout()
+        + useRef()
+        + ...

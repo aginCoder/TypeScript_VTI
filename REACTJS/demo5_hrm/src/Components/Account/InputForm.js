@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function InputForm(props) {
+  let { onHandleCreateNewAccount } = props;
+
+  //   Khai báo State lưu trữ giá trị của các ô nhập liệu
+  let [Email, setEmail] = useState("");
+  let [Username, SetUsername] = useState("");
+  let [Fullname, SetFullname] = useState("");
+  let [Department, SetDepartment] = useState("");
+  let [Postion, SetPostion] = useState("");
+
+  //
+  let handleCreate = () => {
+    let accountNew = {
+      id: 1,
+      email: Email,
+      username: Username,
+      fullname: Fullname,
+      department: Department,
+      postion: Postion,
+      createDate: "16/10/2024",
+    };
+    onHandleCreateNewAccount(accountNew);
+    // console.log("accountNew: ", accountNew);
+  };
+
+  //
   return (
     <>
       <Form>
@@ -13,6 +38,10 @@ function InputForm(props) {
             name="Email"
             placeholder="Input Email"
             type="email"
+            value={Email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
           />
         </FormGroup>
 
@@ -24,6 +53,10 @@ function InputForm(props) {
             name="Username"
             placeholder="Input Username"
             type="text"
+            value={Username}
+            onChange={(event) => {
+              SetUsername(event.target.value);
+            }}
           />
         </FormGroup>
 
@@ -35,25 +68,45 @@ function InputForm(props) {
             name="Fullname"
             placeholder="Input Fullname"
             type="text"
+            value={Fullname}
+            onChange={(event) => {
+              SetFullname(event.target.value);
+            }}
           />
         </FormGroup>
 
         {/* Department */}
         <FormGroup>
           <Label for="Department">Select a Department: </Label>
-          <Input id="Department" name="Department" type="select">
-            <option value={"Sake"}>Sake</option>
-            <option value={"Kế toán"}>Kế toán</option>
+          <Input
+            id="Department"
+            name="Department"
+            type="select"
+            value={Department}
+            onChange={(event) => {
+              SetDepartment(event.target.value);
+            }}
+          >
+            <option value={"Bán hàng"}>Bán hàng</option>
+            <option value={"Bảo vệ"}>Bảo vệ</option>
             <option value={"Giám đốc"}>Giám đốc</option>
-            <option value={"Thiết kế"}>Thiết kế</option>
+            <option value={"Kỹ thuật"}>Kỹ thuật</option>
             <option value={"Marketing"}>Marketing</option>
           </Input>
         </FormGroup>
 
         {/* Postion */}
         <FormGroup>
-          <Label for="Position">Select a Postion: </Label>
-          <Input id="Position" name="Position" type="select">
+          <Label for="Postion">Select a Postion: </Label>
+          <Input
+            id="Postion"
+            name="Postion"
+            type="select"
+            value={Postion}
+            onChange={(event) => {
+              SetPostion(event.target.value);
+            }}
+          >
             <option value={"Dev"}>Dev</option>
             <option value={"Test"}>Test</option>
             <option value={"Scrum_Master"}>Scrum_Master</option>
@@ -62,7 +115,9 @@ function InputForm(props) {
         </FormGroup>
       </Form>
       {/* Nút xử lý */}
-      <Button color="primary">Create</Button>
+      <Button color="primary" onClick={handleCreate}>
+        Create
+      </Button>
       <Button color="danger">Reset</Button>
     </>
   );
