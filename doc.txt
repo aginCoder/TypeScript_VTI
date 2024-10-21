@@ -432,3 +432,9 @@ Cấu trúc cộng chuỗi trong JS
         + useLayout()
         + useRef()
         + ...
+
+    ----------------------------- Buổi 12 ReactJS - Thực hành Mini Project -----------------------------
+
+    ----------------------------- Buổi 13 ReactJS - React Route -----------------------------
+    - Xử lý liên quan tới việc định tuyến trong dự án
+    - cài đặt thư viện
