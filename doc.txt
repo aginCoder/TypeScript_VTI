@@ -434,7 +434,56 @@ Cấu trúc cộng chuỗi trong JS
         + ...
 
     ----------------------------- Buổi 12 ReactJS - Thực hành Mini Project -----------------------------
+        
+    ----------------------------- Buổi 13 ReactJS - React Router ---------------------------------------
+        - Xử lý liên quan tới việc định tuyến trong dự án.
+        - Cài đặt thư viện: npm install react-router-dom
+        - Cấu hình: 
+            - Vào file index.js
+                root.render(
+                    <React.StrictMode>
+                        <BrowserRouter>
+                            <App />
+                        </BrowserRouter>  
+                    </React.StrictMode>
+                    );
 
-    ----------------------------- Buổi 13 ReactJS - React Route -----------------------------
-    - Xử lý liên quan tới việc định tuyến trong dự án
-    - cài đặt thư viện
+        Khai báo bảng định tuyến:
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/AccountManagement" element={<AccountManagement />} />
+                <Route path="/DepartmentManagement" element={<DepartmentManagement />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/AccountDetail/:id_param" element={<AccountDetail />} />
+            </Routes>
+        Sử dụng thẻ Link:
+
+            <Link to={"/home"}>Home</Link>
+            <Link to={"/about"}>About</Link>
+        Sử dụng Hook: useNavigate();
+            let navigate = useNavigate();
+            navigate("/Login");
+
+        Truyền param qua đường link
+            <Route path="/AccountDetail/:id_param" element={<AccountDetail />} />
+            Nhận lại dữ liệu trên đường link: 
+                Sử dụng hook: useParams();
+                    let param = useParams();
+                    let account_show_id = param.id_param;   
+
+    ----------------------------- Buổi 14 ReactJS - Mini Project- API ---------------------------------------
+        Để thực hiện Call API trong ReactJS, sử dụng thư viện:
+            1. fetch
+            2. Axios(Sử dụng)
+                - cài đặt thư viện: npm install axios
+                - Thực hiện call API:
+                    Đường dẫn API   
+                    Phương thức: get(), post(), put(), delete()
+                import Axios from "axios";
+                Axios.get(`link API`).then((res)=>{
+                    res ...
+                })
+                
