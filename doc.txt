@@ -486,4 +486,15 @@ Cấu trúc cộng chuỗi trong JS
                 Axios.get(`link API`).then((res)=>{
                     res ...
                 })
+
+    ----------------------------- Buổi 15 ReactJS - Redux - API ---------------------------------------
+    Thư viện được sử dụng để quản lý cac State ở trong chương trình 
+    Thành phần chính của thư viện Redux
+        Là 1 thư viện độc lập, dùng để lưu trữ các State ở trong chương trình và xử lý để thay đổi các giá trị State theo mong muốn từ phía giao diện
+        Store: Nơi lưu trữ các State ở trong chương trình.
+
+    1. Redux Core: Các thành phần, và nguyên lý hoạt của redux
+
+    2. Tích hợp được Redux vào dự án React
+    
                 

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function InputForm(props) {
-  let { onHandleCreateNewAccount } = props;
+  let { onHandleCreateNewAccount, listDepartment, listPosition } = props;
+
+  // console.log("listDepartment_InputForm: ", listDepartment);
 
   //   Khai báo State lưu trữ giá trị của các ô nhập liệu
   let [Email, setEmail] = useState("");
@@ -13,19 +15,26 @@ function InputForm(props) {
 
   //
   let handleCreate = () => {
+
     let accountNew = {
-      id: 1,
       email: Email,
       username: Username,
       fullname: Fullname,
-      department: Department,
-      postion: Postion,
-      createDate: "16/10/2024",
+      departmentId: Department,
+      positionId: Postion,
     };
     onHandleCreateNewAccount(accountNew);
     // console.log("accountNew: ", accountNew);
   };
 
+  //
+  let departmentitems = listDepartment ? listDepartment.map((dep) => (
+    <option key={dep.id} value={dep.id}>{dep.name}</option>
+  )) : [];
+
+  let positionitems = listPosition ? listPosition.map((pos) => (
+    <option key={pos.id} value={pos.id}>{pos.name}</option>
+  )) : [];
   //
   return (
     <>
@@ -87,6 +96,7 @@ function InputForm(props) {
               SetDepartment(event.target.value);
             }}
           >
+            {departmentitems}
             <option value={"Bán hàng"}>Bán hàng</option>
             <option value={"Bảo vệ"}>Bảo vệ</option>
             <option value={"Giám đốc"}>Giám đốc</option>
@@ -107,6 +117,7 @@ function InputForm(props) {
               SetPostion(event.target.value);
             }}
           >
+            {positionitems}
             <option value={"Dev"}>Dev</option>
             <option value={"Test"}>Test</option>
             <option value={"Scrum_Master"}>Scrum_Master</option>
