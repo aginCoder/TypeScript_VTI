@@ -13,35 +13,35 @@ ReactJS:
     Hoàn thành 1 giao diện ReactJS
 
 -- TypeScripts --
-    Khai báo 1 biến myName trong JavaScipts:  'anpg' ?
-        const myName = "anpg"
-        let myName = "anpg"
-        var myName = "anpg"
+    Khai báo 1 biến myName trong JavaScipts:  'daonq' ?
+        const myName = "daonq"
+        let myName = "daonq"
+        var myName = "daonq"
         var myAge = 20
 
-    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='anpg1', address='HN'
+    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='daonq1', address='HN'
         let student1 = 
             {
                 id: 1,
-                name: "anpg1",
+                name: "daonq1",
                 address: "HN"
             };
         let student2 = 
             {
                 id: 2,
-                name: "anpg2",
+                name: "daonq2",
                 address: "HN"
             };
 
            let student3 = 
             {
                 id: 2,
-                name_: "anpg2",
+                name_: "daonq2",
                 address: "HN"
             };
     JavaScipts != Java
         Java:
-            String myName = "anpg"
+            String myName = "daonq"
             int    myAge = 20;
             Class(thuộc tính, phương thức) ==> Instant
     
@@ -61,7 +61,7 @@ ReactJS:
         Demo TS, JS?
             Cách 1:
                 .js
-                var myName ="anpg",
+                var myName ="daonq",
                 console.log(myName)
                 Tạo file: index.html
                 link file .js vào file index.html
@@ -171,50 +171,52 @@ Cấu trúc cộng chuỗi trong JS
 
     async/await 
 
------------------- Buổi 5 - ReactJS -------------------------------
-1. ReacJS 
-    Thư viện hỗ trợ xử lý giao diện (Frontend) 
+----------------------------- Buổi 5- ReactJS -----------------------------
+1. ReactJS
+    Thư viện hỗ trợ xử lý giao diện(Frontend)
     Ưu điểm:
         Hoạt động mượt hơn.
         Tái sử dụng
-    Phân chia: Giao diện lớn ==> Giao diện nhỏ hơn ==> nhỏ ==> ...
+    Phân chia: Giao diện lớn ==> Giao diện nhỏ hơn ==> nhỏ ==>...
     Component
 
-2. Tạo 1 dự án ReactJS
-    create-react-app: Công cụ (tool) hỗ trợ cho bạn tạo ra 1 dự án ReactJS
-    npm install -g create-react-app: cài đặt công cụ create-react-app
+2. Tạo 1 dự ReactJS
+        create-react-app: Công cụ(tool) hỗ trợ cho bạn tạo ra 1 dự án ReactJS
+        npm install -g create-react-app: Cài đặt công cụ create-react-app
 
-    Sử dụng create-react-app tạo ra dự án ReactJS đầu tiên
-        create-react-app
-    Chạy dự án
-        Chuyển vào thư mục dự án:
-            cd đường dẫn
-            npm start
+        Sử dụng create-react-app tạo ra dự án ReactJS đầu tiên: demo1
+            create-react-app demo1
+        Chạy dự án
+            Chuyển vào thư mục dự án:
+                cd G:\DemoVTI\Railway85\REACTJS\demo1\demo1
+                npm start
 3. Cấu trúc dự án
     Node modules
     public
         index.html
-    src
-        inde.js
+    src 
+        index.js
         app.js
-    ==> Thay đổi nội dung ==> Hello VTI
+    ==> Thay đổi nôi dung ==> Hello VTI
 
-    Xóa các file không cần thiết
+    Xoá các file không cần thiết
 
 4. Component
+
     import "./App.css";
 
     function App() {
         return (
             <div className="App">
-            <h1>Hello VTI</h1>
-            </div
+                <h1>Hello VTI</h1>
+            </div>
         );
-    }
+        }
 
     export default App;
 
-    ----------------------------- Buổi 6- ReactJS -----------------------------
+    Mã???
+----------------------------- Buổi 6- ReactJS -----------------------------
 1.   React.createElement(..,..,..)==> Hàm dùng tạo các thành html cho trang web
     Nhược điểm: Khó viết
 
@@ -313,14 +315,14 @@ Cấu trúc cộng chuỗi trong JS
     Class Component 
         Dùng phím tắt rcc
         
-        class anpg extends Component {
+        class Daonq extends Component {
         // hàm render
         render() {
             // logic
             // logic
             return (
             <>
-                <h3>Hello anpg VTI</h3>
+                <h3>Hello DAONQ VTI</h3>
             </>
             );
         }
@@ -347,6 +349,9 @@ Cấu trúc cộng chuỗi trong JS
             Tại Component con, thực hiện gọi lại hàm Callback ở Cha thông qua props
         3. Truyền dữ liệu giữa 2 Component cùng cấp
             Không thể truyền dữ liệu giữa 2 Component cùng cấp
+        4. Truyền dữ liệu thông qua nhiều tầng
+            Sử dụng Props để truyền lần lượt qua từng tầng
+
     State?
         - Giống như 1 biến trong chương trình, lưu trữ dữ liệu trong Class Component
         - Khi dữ liệu lưu trữ trong State thay đổi, thì giao diện sẽ được tự động cập nhật dữ liệu mới
@@ -365,9 +370,8 @@ Cấu trúc cộng chuỗi trong JS
                 });
         - Không sử dụng State trong Functional Component
 
-        ----------------------------- Buổi 9 - ReactJS -----------------------------
-
-    1. Xử lý Form trong ReactJS
+----------------------------- Buổi 9 ReactJS -----------------------------
+1. Xử lý Form trong ReactJS
     Bước 1: Khai báo ra State để lưu trữ dữ liệu cho ô nhập liệu
     Bước 2: Trong ô nhập liệu
         Đặt thuộc tính value: value={this.state.data}
@@ -375,22 +379,21 @@ Cấu trúc cộng chuỗi trong JS
     Bước 3: Khai báo hàm xử lý sự kiện onCHange: handleChange
             this.setState({
                 data: event.target.value,
-            }); 
+            });
+2. Tìm hiểu về Life Cycle trong ReactJS
 
-        ----------------------------- Buổi 10 - ReactJS -----------------------------
+----------------------------- Buổi 10 ReactJS -----------------------------
+1. Thực hành Mini Project
+    Tạo dự án (Functional Component)
+    Cấu trúc của dự án
+        Page
+        Container
+        Component
 
-    1. Thực hành Mini Project
-        Tạo dự án (Functional Component)
-        Cấu trúc của dự án
-            Page
-            Container
-            Component
-
-            Container Component: Xử lý logic
-            UI Component: Hiển thị giao diện
-
-    1 số UI:
-        Reactrap: Button
+        Container Component: Xử lý logic
+        UI Component: Hiển thị giao diện
+    1 số UI: 
+        Reactrap: Button 
         MUI
         AntDesign
 
@@ -433,68 +436,72 @@ Cấu trúc cộng chuỗi trong JS
         + useRef()
         + ...
 
-    ----------------------------- Buổi 12 ReactJS - Thực hành Mini Project -----------------------------
-        
-    ----------------------------- Buổi 13 ReactJS - React Router ---------------------------------------
-        - Xử lý liên quan tới việc định tuyến trong dự án.
-        - Cài đặt thư viện: npm install react-router-dom
-        - Cấu hình: 
-            - Vào file index.js
-                root.render(
-                    <React.StrictMode>
-                        <BrowserRouter>
-                            <App />
-                        </BrowserRouter>  
-                    </React.StrictMode>
-                    );
+----------------------------- Buổi 12 ReactJS - Thực hành Mini Project -----------------------------
+       
+----------------------------- Buổi 13 ReactJS - React Router ---------------------------------------
+    - Xử lý liên quan tới việc định tuyến trong dự án.
+    - Cài đặt thư viện: npm install react-router-dom
+    - Cấu hình: 
+        - Vào file index.js
+            root.render(
+                <React.StrictMode>
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>  
+                </React.StrictMode>
+                );
 
-        Khai báo bảng định tuyến:
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/AccountManagement" element={<AccountManagement />} />
-                <Route path="/DepartmentManagement" element={<DepartmentManagement />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/SignUp" element={<SignUp />} />
-                <Route path="/AccountDetail/:id_param" element={<AccountDetail />} />
-            </Routes>
-        Sử dụng thẻ Link:
-
-            <Link to={"/home"}>Home</Link>
-            <Link to={"/about"}>About</Link>
-        Sử dụng Hook: useNavigate();
-            let navigate = useNavigate();
-            navigate("/Login");
-
-        Truyền param qua đường link
+    Khai báo bảng định tuyến:
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/AccountManagement" element={<AccountManagement />} />
+            <Route path="/DepartmentManagement" element={<DepartmentManagement />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/SignUp" element={<SignUp />} />
             <Route path="/AccountDetail/:id_param" element={<AccountDetail />} />
-            Nhận lại dữ liệu trên đường link: 
-                Sử dụng hook: useParams();
-                    let param = useParams();
-                    let account_show_id = param.id_param;   
+          </Routes>
+    Sử dụng thẻ Link:
 
-    ----------------------------- Buổi 14 ReactJS - Mini Project- API ---------------------------------------
-        Để thực hiện Call API trong ReactJS, sử dụng thư viện:
-            1. fetch
-            2. Axios(Sử dụng)
-                - cài đặt thư viện: npm install axios
-                - Thực hiện call API:
-                    Đường dẫn API   
-                    Phương thức: get(), post(), put(), delete()
-                import Axios from "axios";
-                Axios.get(`link API`).then((res)=>{
-                    res ...
-                })
+        <Link to={"/home"}>Home</Link>
+        <Link to={"/about"}>About</Link>
+    Sử dụng Hook: useNavigate();
+        let navigate = useNavigate();
+        navigate("/Login");
 
-    ----------------------------- Buổi 15 ReactJS - Redux - API ---------------------------------------
-    Thư viện được sử dụng để quản lý cac State ở trong chương trình 
+    Truyền param qua đường link
+        <Route path="/AccountDetail/:id_param" element={<AccountDetail />} />
+        Nhận lại dữ liệu trên đường link: 
+            Sử dụng hook: useParams();
+                  let param = useParams();
+                  let account_show_id = param.id_param;   
+
+----------------------------- Buổi 14 ReactJS - Mini Project- API ---------------------------------------
+    Để thực hiện Call API trong ReactJS, sử dụng thư viện:
+        1. fetch
+        2. Axios(Sử dụng)
+            - cài đặt thư viện: npm install axios
+            - Thực hiện call API:
+                Đường dẫn API   
+                Phương thức: get(), post(), put(), delete()
+            import Axios from "axios";
+            Axios.get(`link API`).then((res)=>{
+                res ...
+            })
+            
+----------------------------- Buổi 15 ReactJS - Redux- API ---------------------------------------
+    Thư viện được sử dụng để quản lý các State ở trong chương trình.
     Thành phần chính của thư viện Redux
         Là 1 thư viện độc lập, dùng để lưu trữ các State ở trong chương trình và xử lý để thay đổi các giá trị State theo mong muốn từ phía giao diện
         Store: Nơi lưu trữ các State ở trong chương trình.
 
-    1. Redux Core: Các thành phần, và nguyên lý hoạt của redux
+    1. Redux Core: 
+        Các thành phần, và nguyên lý hoạt của redux
+            Store
+            Reducer
+            Action
+        Chia tách file
 
     2. Tích hợp được Redux vào dự án React
-    
-                
+        

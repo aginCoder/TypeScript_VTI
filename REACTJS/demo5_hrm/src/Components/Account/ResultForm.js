@@ -24,8 +24,6 @@ function ResultForm(props) {
         </thead>
         <tbody>
           <ResultFormItem listAccount={listAccount} />
-          {/* <ResultFormItem />
-          <ResultFormItem /> */}
         </tbody>
       </Table>
     </>
