@@ -55,3 +55,49 @@
   width: 300px; 
   height: auto; 
 }
+
+
+/* Responsive styling for iPhone X */
+@media only screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn:hover {
+    transform: scale(1.02);
+  }
+}

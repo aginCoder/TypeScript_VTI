@@ -1,56 +1,47 @@
+// src/components/ListUser.js
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Header from "../pages/root/Header";
 import Menu from "../pages/root/Menu";
 import Footer from "../pages/root/Footer";
+import { fetchUsers, deleteUser } from "../pages/API/api"; 
 
 const ListUser = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
   const [totalPages, setTotalPages] = useState(0);
-  const { id } = useParams();
 
   useEffect(() => {
-    fetchUsers();
+    fetchUserList();
   }, [page, searchTerm]);
 
-  const fetchUsers = async () => {
+  const fetchUserList = async () => {
     try {
-      const response = searchTerm === ''
-        ? await axios.get(`http://localhost:8080/users?page=${page}&size=3`)
-        : await searchUsers();
-
-      setUsers(response.data.content || []);
-      setTotalPages(response.data.totalPages || 0);
+      const data = await fetchUsers(page, searchTerm);
+      setUsers(data.content || []);
+      setTotalPages(data.totalPages || 0);
     } catch (error) {
       console.error("Error fetching users:", error);
     }
   };
 
-  const searchUsers = async () => {
-    try {
-      const response = await axios.get(`http://localhost:8080/users/search?name=${searchTerm}&page=${page}&size=3`);
-      return response;
-    } catch (error) {
-      console.error("Error searching users:", error);
-    }
-  };
-
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
-    fetchUsers();
-  };
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
     setPage(0);
-    fetchUsers();
   };
 
   const handlePageChange = (newPage) => {
     setPage(newPage);
+  };
+
+  const handleDeleteUser = async (id) => {
+    try {
+      await deleteUser(id);
+      fetchUserList();
+    } catch (error) {
+      console.error("Error deleting user:", error);
+    }
   };
 
   return (
@@ -97,15 +88,9 @@ const ListUser = () => {
                     <td>{user.email}</td>
                     <td>{user.created_at ? new Date(user.created_at).toLocaleString() : "N/A"}</td>
                     <td>
-                      <Link className="btn btn-info btn-sm mx-1" to={`/viewuser/${user.id}`}>
-                        View
-                      </Link>
-                      <Link className="btn btn-outline-success btn-sm mx-1" to={`/edituser/${user.id}`}>
-                        Edit
-                      </Link>
-                      <button className="btn btn-danger btn-sm mx-1" onClick={() => deleteUser(user.id)}>
-                        Delete
-                      </button>
+                      <Link className="btn btn-info btn-sm mx-1" to={`/viewuser/${user.id}`}>View</Link>
+                      <Link className="btn btn-outline-success btn-sm mx-1" to={`/edituser/${user.id}`}>Edit</Link>
+                      <button className="btn btn-danger btn-sm mx-1" onClick={() => handleDeleteUser(user.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -121,9 +106,7 @@ const ListUser = () => {
                 </li>
                 {[...Array(totalPages)].map((_, i) => (
                   <li key={i} className={`page-item ${i === page ? "active" : ""}`}>
-                    <button className="page-link" onClick={() => handlePageChange(i)}>
-                      {i + 1}
-                    </button>
+                    <button className="page-link" onClick={() => handlePageChange(i)}>{i + 1}</button>
                   </li>
                 ))}
                 <li className={`page-item ${page === totalPages - 1 ? "disabled" : ""}`}>
@@ -134,12 +117,8 @@ const ListUser = () => {
           </nav>
         </div>
         <div className="d-flex justify-content-end mt-5">
-          <Link className="btn btn-success mx-1" to={"/adduser"}>
-            Thêm người dùng
-          </Link>
-          <Link className="btn btn-primary mx-1" to={"/"}>
-            Back to Home
-          </Link>
+          <Link className="btn btn-success mx-1" to={"/adduser"}>Thêm người dùng</Link>
+          <Link className="btn btn-primary mx-1" to={"/"}>Back to Home</Link>
         </div>
       </main>
       <Footer />

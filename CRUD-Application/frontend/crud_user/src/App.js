@@ -2,10 +2,10 @@ import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddUser from "./users/AddUser";
-import ListUser from "./users/ListUser";
-import EditUser from "./users/EditUser";
-import ViewUser from "./users/ViewUser";
+import AddUser from "./Forms/AddUser";
+import ListUser from "./Forms/ListUser";
+import EditUser from "./Forms/EditUser";
+import ViewUser from "./Forms/ViewUser";
 
 function App() {
   return (

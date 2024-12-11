@@ -1,13 +1,13 @@
-import axios from "axios";
+// src/pages/EditUser.js
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../pages/root/Header";
 import Menu from "../pages/root/Menu";
 import Footer from "../pages/root/Footer";
+import { updateUser, getUser } from "../pages/API/api"; 
 
 export default function EditUser() {
   let navigate = useNavigate();
-
   const { id } = useParams();
 
   const [user, setUser] = useState({
@@ -28,13 +28,13 @@ export default function EditUser() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/user/${id}`, user);
+    await updateUser(id, user); 
     navigate("/listuser");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
-    setUser(result.data);
+    const result = await getUser(id); 
+    setUser(result);
   };
 
   return (

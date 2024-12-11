@@ -20,8 +20,6 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
-          
         </div>
       </nav>
     </div>
