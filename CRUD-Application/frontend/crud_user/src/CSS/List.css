@@ -1,0 +1,56 @@
+/* Tùy chỉnh giao diện cho danh sách người dùng */
+.card-header {
+    background-color: #1E90FF !important;
+  }
+  
+  .card-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f8f9fa !important;
+    transition: 0.3s ease;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+  }
+  
+  .pagination .page-item .page-link {
+    color: #1E90FF;
+  }
+  
+  .btn-success {
+    background-color: #4af5f8;
+    border-color: #4af5f8;
+  }
+  
+  .btn-success:hover {
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+  }
+  
+
+  @media only screen and (max-width: 375px) {
+    .btn {
+      font-size: 12px;
+      padding: 5px;
+    }
+  
+    .table-responsive {
+      font-size: 14px;
+    }
+  }
+  

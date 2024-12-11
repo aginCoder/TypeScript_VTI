@@ -5,6 +5,7 @@ import Header from "../pages/root/Header";
 import Menu from "../pages/root/Menu";
 import Footer from "../pages/root/Footer";
 import { fetchUsers, deleteUser } from "../pages/API/api"; 
+// import '../CSS/List.css'
 
 const ListUser = () => {
   const [users, setUsers] = useState([]);
